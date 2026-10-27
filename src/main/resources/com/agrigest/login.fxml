@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.geometry.Insets?>
+        <?import javafx.scene.control.Button?>
+        <?import javafx.scene.control.CheckBox?>
+        <?import javafx.scene.control.Hyperlink?>
+        <?import javafx.scene.control.Label?>
+        <?import javafx.scene.control.PasswordField?>
+        <?import javafx.scene.control.TextField?>
+        <?import javafx.scene.image.Image?>
+        <?import javafx.scene.image.ImageView?>
+        <?import javafx.scene.layout.BorderPane?>
+        <?import javafx.scene.layout.HBox?>
+        <?import javafx.scene.layout.StackPane?>
+        <?import javafx.scene.layout.VBox?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.agrigest.LoginController"
+            prefWidth="1080"
+            prefHeight="620"
+            stylesheets="@style.css"
+            styleClass="root-pane">
+
+    <!-- Partie gauche : identité visuelle -->
+    <left>
+        <VBox prefWidth="510"
+              alignment="CENTER"
+              spacing="25"
+              styleClass="brand-panel">
+
+            <padding>
+                <Insets top="25" right="25" bottom="25" left="25"/>
+            </padding>
+
+            <ImageView fitWidth="460"
+                       fitHeight="345"
+                       preserveRatio="false"
+                       styleClass="farm-image">
+                <image>
+                    <Image url="@images/ferme.jpg"/>
+                </image>
+            </ImageView>
+
+            <HBox alignment="CENTER" spacing="15">
+
+                <StackPane styleClass="logo-circle">
+                    <Label text="♧" styleClass="logo-symbol"/>
+                </StackPane>
+
+                <VBox alignment="CENTER_LEFT" spacing="2">
+                    <Label text="AgriGest" styleClass="brand-title"/>
+                    <Label text="Gestion agricole" styleClass="brand-subtitle"/>
+                </VBox>
+
+            </HBox>
+
+            <Label text="Une gestion simple et efficace de votre exploitation"
+                   wrapText="true"
+                   alignment="CENTER"
+                   styleClass="brand-description"/>
+
+        </VBox>
+    </left>
+
+    <!-- Partie droite : formulaire -->
+    <center>
+        <VBox alignment="TOP_CENTER"
+              spacing="22"
+              styleClass="login-panel">
+
+            <padding>
+                <Insets top="25" right="45" bottom="35" left="45"/>
+            </padding>
+
+            <!-- Choix de la langue -->
+            <HBox alignment="CENTER_RIGHT"
+                  spacing="12"
+                  maxWidth="Infinity">
+
+                <Hyperlink text="Français"
+                           fx:id="francaisButton"
+                           onAction="#setFrench"
+                           styleClass="language-link"/>
+
+                <Button text="العربية"
+                        onAction="#setArabic"
+                        styleClass="language-button"/>
+
+            </HBox>
+
+            <!-- Titre -->
+            <VBox alignment="CENTER" spacing="5">
+                <Label fx:id="welcomeLabel"
+                       text="Bienvenue"
+                       styleClass="welcome-title"/>
+
+                <Label fx:id="descriptionLabel"
+                       text="Connectez-vous pour continuer"
+                       styleClass="welcome-description"/>
+            </VBox>
+
+            <!-- Champs de connexion -->
+            <VBox spacing="14"
+                  maxWidth="320"
+                  styleClass="form-container">
+
+                <TextField fx:id="usernameField"
+                           promptText="Nom d'utilisateur"
+                           prefHeight="43"
+                           styleClass="input-field"/>
+
+                <PasswordField fx:id="passwordField"
+                               promptText="Mot de passe"
+                               prefHeight="43"
+                               styleClass="input-field"/>
+
+                <HBox alignment="CENTER_LEFT">
+                    <CheckBox fx:id="rememberCheckBox"
+                              text="Se souvenir de moi"
+                              styleClass="remember-checkbox"/>
+                </HBox>
+
+                <Button fx:id="loginButton"
+                        text="Se connecter"
+                        onAction="#handleLogin"
+                        prefHeight="44"
+                        maxWidth="Infinity"
+                        styleClass="login-button"/>
+
+                <Label fx:id="messageLabel"
+                       text=""
+                       wrapText="true"
+                       styleClass="message-label"/>
+
+                <HBox alignment="CENTER" spacing="10">
+                    <VBox HBox.hgrow="ALWAYS"
+                          styleClass="separator-line"/>
+
+                    <Label text="ou"
+                           styleClass="separator-text"/>
+
+                    <VBox HBox.hgrow="ALWAYS"
+                          styleClass="separator-line"/>
+                </HBox>
+
+            </VBox>
+
+        </VBox>
+    </center>
+
+</BorderPane>

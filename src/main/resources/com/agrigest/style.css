@@ -1,0 +1,140 @@
+
+.root-pane {
+    -fx-background-color: #F4F6F1;
+    -fx-font-family: "Arial";
+}
+
+/* Partie gauche */
+.brand-panel {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #19543F,
+            #104A36
+    );
+}
+
+.farm-image {
+    -fx-background-radius: 15;
+    -fx-border-radius: 15;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0, 0, 3);
+}
+
+.logo-circle {
+    -fx-min-width: 78;
+    -fx-min-height: 78;
+    -fx-max-width: 78;
+    -fx-max-height: 78;
+    -fx-background-color: transparent;
+    -fx-border-color: #66B447;
+    -fx-border-width: 7;
+    -fx-border-radius: 50%;
+    -fx-background-radius: 50%;
+}
+
+.logo-symbol {
+    -fx-font-size: 42px;
+    -fx-text-fill: #76C34E;
+}
+
+.brand-title {
+    -fx-font-size: 39px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.brand-subtitle {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.brand-description {
+    -fx-font-size: 13px;
+    -fx-text-fill: #D1E1D8;
+    -fx-text-alignment: center;
+}
+
+/* Partie droite */
+.login-panel {
+    -fx-background-color: #F4F6F1;
+}
+
+.welcome-title {
+    -fx-font-size: 37px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #174D39;
+}
+
+.welcome-description {
+    -fx-font-size: 16px;
+    -fx-text-fill: #557064;
+}
+
+.language-link {
+    -fx-text-fill: #64756D;
+    -fx-font-size: 13px;
+    -fx-border-color: transparent;
+    -fx-underline: false;
+}
+
+.language-button {
+    -fx-background-color: #174D39;
+    -fx-text-fill: white;
+    -fx-background-radius: 25;
+    -fx-padding: 8 18;
+    -fx-cursor: hand;
+}
+
+.form-container {
+    -fx-padding: 10 0 0 0;
+}
+
+.input-field {
+    -fx-background-color: #E8ECE7;
+    -fx-background-radius: 25;
+    -fx-border-color: #DDE3DC;
+    -fx-border-radius: 25;
+    -fx-padding: 10 18;
+    -fx-font-size: 14px;
+    -fx-text-fill: #254A39;
+    -fx-prompt-text-fill: #929B95;
+}
+
+.input-field:focused {
+    -fx-border-color: #24684C;
+    -fx-border-width: 1.5;
+}
+
+.remember-checkbox {
+    -fx-font-size: 13px;
+    -fx-text-fill: #385747;
+}
+
+.login-button {
+    -fx-background-color: #17543D;
+    -fx-text-fill: white;
+    -fx-background-radius: 25;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.login-button:hover {
+    -fx-background-color: #267653;
+}
+
+.message-label {
+    -fx-text-fill: #B33A32;
+    -fx-font-size: 12px;
+}
+
+.separator-line {
+    -fx-background-color: #D8DED7;
+    -fx-pref-height: 1;
+    -fx-max-height: 1;
+}
+
+.separator-text {
+    -fx-text-fill: #849087;
+    -fx-font-size: 14px;
+}
