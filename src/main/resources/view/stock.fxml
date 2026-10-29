@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="ma.agrigest.controller.StockController"
+      alignment="TOP_LEFT"
+      spacing="20"
+      maxWidth="Infinity"
+      maxHeight="Infinity"
+      style="-fx-background-color: #F4F6F5; -fx-padding: 30;">
+
+    <Label text="Gestion du Stock"
+           style="-fx-font-size: 28px;
+                  -fx-font-weight: bold;
+                  -fx-text-fill: #24583F;"/>
+
+    <Label text="Gérez les produits et les quantités en stock."
+           style="-fx-font-size: 14px;
+                  -fx-text-fill: #666666;"/>
+
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Button fx:id="btnAjouter"
+                text="+ Ajouter"
+                onAction="#afficherFormulaire"
+                style="-fx-background-color: #24583F;
+                       -fx-text-fill: white;
+                       -fx-font-size: 14px;
+                       -fx-padding: 10 20;"/>
+    </HBox>
+
+    <VBox fx:id="formulaireStock"
+          spacing="10"
+          visible="false"
+          managed="false"
+          style="-fx-background-color: white;
+                 -fx-padding: 20;
+                 -fx-background-radius: 10;">
+
+        <Label text="Ajouter un produit"
+               style="-fx-font-size: 20px;
+                      -fx-font-weight: bold;
+                      -fx-text-fill: #24583F;"/>
+
+        <Label text="Nom du produit"/>
+        <TextField fx:id="nomProduit"
+                   promptText="Ex : Engrais"/>
+
+        <Label text="Quantité"/>
+        <TextField fx:id="quantiteProduit"
+                   promptText="Ex : 50"/>
+
+        <Label text="Prix (DH)"/>
+        <TextField fx:id="prixProduit"
+                   promptText="Ex : 120"/>
+
+        <HBox spacing="10">
+            <Button text="Enregistrer"
+                    onAction="#enregistrerProduit"
+                    style="-fx-background-color: #24583F;
+                           -fx-text-fill: white;
+                           -fx-padding: 8 16;"/>
+
+            <Button text="Annuler"
+                    onAction="#cacherFormulaire"
+                    style="-fx-padding: 8 16;"/>
+        </HBox>
+
+    </VBox>
+
+    <TableView fx:id="tableStock"
+               VBox.vgrow="ALWAYS"
+               prefHeight="400">
+
+        <columns>
+            <TableColumn fx:id="colId"
+                         text="ID"
+                         prefWidth="80"/>
+
+            <TableColumn fx:id="colNom"
+                         text="Nom du produit"
+                         prefWidth="250"/>
+
+            <TableColumn fx:id="colQuantite"
+                         text="Quantité"
+                         prefWidth="150"/>
+
+            <TableColumn fx:id="colPrix"
+                         text="Prix (DH)"
+                         prefWidth="150"/>
+        </columns>
+
+    </TableView>
+
+</VBox>

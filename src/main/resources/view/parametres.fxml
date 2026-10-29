@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+
+<VBox xmlns:fx="http://javafx.com/fxml/1"
+      alignment="CENTER"
+      spacing="15"
+      style="-fx-background-color: #F4F6F5; -fx-padding: 30;">
+
+    <Label text="paramitre"
+           style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #58242e;"/>
+
+    <Label text="parmitr"/>
+
+</VBox>

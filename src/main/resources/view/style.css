@@ -1,4 +1,108 @@
 
+/* =================================
+   AgreGest - Sidebar Premium Style
+   ================================= */
+
+.sidebar {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            #104C3D,
+            #10434c
+    );
+    -fx-padding: 28px 14px 22px 14px;
+    -fx-spacing: 10px;
+    -fx-pref-width: 250px;
+}
+
+/* Logo et nom */
+
+.logo-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.logo-icon {
+    -fx-text-fill: #B9E4A8;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Petit texte de section */
+
+.menu-section {
+    -fx-text-fill: #9CBFB1;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 10px 5px 10px;
+
+}
+
+/* Boutons du menu */
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #DCEAE4;
+    -fx-font-size: 13px;
+    -fx-font-weight: normal;
+    -fx-alignment: CENTER_LEFT;
+    -fx-padding: 13px 12px;
+    -fx-background-radius: 9px;
+    -fx-border-radius: 9px;
+    -fx-cursor: hand;
+    -fx-pref-height: 44px;
+    -fx-max-width: Infinity;
+}
+
+/* Survol de la souris */
+
+.menu-button:hover {
+    -fx-background-color: #245B49;
+    -fx-text-fill: #FFFFFF;
+}
+
+/* Bouton sélectionné ou focus */
+
+.menu-button:focused {
+    -fx-background-color: #34785E;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+/* Titre de l'application */
+.app-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+/* Layout principal */
+.main-layout {
+    -fx-background-color: #F4F6F5;
+}
+
+/* Sidebar flexible */
+.sidebar {
+    -fx-pref-width: 245px;
+    -fx-min-width: 190px;
+    -fx-max-width: 270px;
+    -fx-padding: 20px 15px;
+    -fx-spacing: 10px;
+}
+
+/* Boutons du menu */
+.menu-button {
+    -fx-max-width: Infinity;
+    -fx-alignment: CENTER_LEFT;
+    -fx-content-display: LEFT;
+    -fx-graphic-text-gap: 12px;
+    -fx-padding: 12px 10px;
+}
+/* Zone centrale flexible */
+.content-area {
+    -fx-padding: 25px;
+    -fx-background-color: #F4F6F5;
+}
+/* ================================================================================ */
+
 .root-pane {
     -fx-background-color: #F4F6F1;
     -fx-font-family: "Arial";
