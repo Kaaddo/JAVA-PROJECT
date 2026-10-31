@@ -1,20 +1,34 @@
 
-/* =================================
-   AgreGest - Sidebar Premium Style
-   ================================= */
+/* =========================================
+   AGRIGEST - MAIN LAYOUT
+   ========================================= */
+
+.root {
+    -fx-font-family: "Arial";
+}
+
+.main-layout {
+    -fx-background-color: #F4F6F5;
+}
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
 
 .sidebar {
     -fx-background-color: linear-gradient(
             to bottom,
             #104C3D,
-            #10434c
+            #10434C
     );
-    -fx-padding: 28px 14px 22px 14px;
+    -fx-padding: 20px 15px;
     -fx-spacing: 10px;
-    -fx-pref-width: 250px;
+    -fx-pref-width: 245px;
+    -fx-min-width: 190px;
+    -fx-max-width: 270px;
 }
 
-/* Logo et nom */
+/* Logo */
 
 .logo-title {
     -fx-text-fill: #FFFFFF;
@@ -28,17 +42,16 @@
     -fx-font-weight: bold;
 }
 
-/* Petit texte de section */
+/* Section */
 
 .menu-section {
     -fx-text-fill: #9CBFB1;
     -fx-font-size: 10px;
     -fx-font-weight: bold;
     -fx-padding: 12px 10px 5px 10px;
-
 }
 
-/* Boutons du menu */
+/* Menu buttons */
 
 .menu-button {
     -fx-background-color: transparent;
@@ -46,7 +59,9 @@
     -fx-font-size: 13px;
     -fx-font-weight: normal;
     -fx-alignment: CENTER_LEFT;
-    -fx-padding: 13px 12px;
+    -fx-content-display: LEFT;
+    -fx-graphic-text-gap: 12px;
+    -fx-padding: 12px 10px;
     -fx-background-radius: 9px;
     -fx-border-radius: 9px;
     -fx-cursor: hand;
@@ -54,191 +69,292 @@
     -fx-max-width: Infinity;
 }
 
-/* Survol de la souris */
-
 .menu-button:hover {
     -fx-background-color: #245B49;
     -fx-text-fill: #FFFFFF;
 }
-
-/* Bouton sélectionné ou focus */
 
 .menu-button:focused {
     -fx-background-color: #34785E;
     -fx-text-fill: #FFFFFF;
     -fx-font-weight: bold;
 }
-/* Titre de l'application */
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
 .app-title {
     -fx-font-size: 22px;
     -fx-font-weight: bold;
     -fx-text-fill: white;
 }
-/* Layout principal */
-.main-layout {
-    -fx-background-color: #F4F6F5;
-}
 
-/* Sidebar flexible */
-.sidebar {
-    -fx-pref-width: 245px;
-    -fx-min-width: 190px;
-    -fx-max-width: 270px;
-    -fx-padding: 20px 15px;
-    -fx-spacing: 10px;
-}
-
-/* Boutons du menu */
-.menu-button {
-    -fx-max-width: Infinity;
-    -fx-alignment: CENTER_LEFT;
-    -fx-content-display: LEFT;
-    -fx-graphic-text-gap: 12px;
-    -fx-padding: 12px 10px;
-}
-/* Zone centrale flexible */
 .content-area {
     -fx-padding: 25px;
     -fx-background-color: #F4F6F5;
 }
-/* ================================================================================ */
 
-.root-pane {
-    -fx-background-color: #F4F6F1;
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.root {
     -fx-font-family: "Arial";
 }
 
-/* Partie gauche */
-.brand-panel {
+.main-layout {
+    -fx-background-color: #F4F6F5;
+}
+
+/* =========================================
+   SIDEBAR
+   ========================================= */
+
+.sidebar {
     -fx-background-color: linear-gradient(
             to bottom,
-            #19543F,
-            #104A36
+            #104C3D,
+            #10434C
+    );
+    -fx-padding: 20px 15px;
+    -fx-spacing: 10px;
+    -fx-pref-width: 245px;
+    -fx-min-width: 190px;
+    -fx-max-width: 270px;
+}
+
+/* Logo */
+
+.logo-title {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 26px;
+    -fx-font-weight: bold;
+}
+
+.logo-icon {
+    -fx-text-fill: #B9E4A8;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Section */
+
+.menu-section {
+    -fx-text-fill: #9CBFB1;
+    -fx-font-size: 10px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px 10px 5px 10px;
+}
+
+/* Menu buttons */
+
+.menu-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #DCEAE4;
+    -fx-font-size: 13px;
+    -fx-font-weight: normal;
+    -fx-alignment: CENTER_LEFT;
+    -fx-content-display: LEFT;
+    -fx-graphic-text-gap: 12px;
+    -fx-padding: 12px 10px;
+    -fx-background-radius: 9px;
+    -fx-border-radius: 9px;
+    -fx-cursor: hand;
+    -fx-pref-height: 44px;
+    -fx-max-width: Infinity;
+}
+
+.menu-button:hover {
+    -fx-background-color: #245B49;
+    -fx-text-fill: #FFFFFF;
+}
+
+.menu-button:focused {
+    -fx-background-color: #34785E;
+    -fx-text-fill: #FFFFFF;
+    -fx-font-weight: bold;
+}
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.app-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.content-area {
+    -fx-padding: 25px;
+    -fx-background-color: #F4F6F5;
+}
+
+/* =========================================
+   LOGIN PAGE
+   ========================================= */
+
+.login-root {
+    -fx-font-family: "Arial";
+    -fx-background-color: #10362A;
+}
+
+/* Dark green film over the photo, fading to the right */
+.login-overlay {
+    -fx-background-color: linear-gradient(
+            to right,
+            rgba(14, 48, 36, 0.92),
+            rgba(14, 48, 36, 0.60) 42%,
+            rgba(14, 48, 36, 0.10) 75%,
+            rgba(14, 48, 36, 0.00)
     );
 }
 
-.farm-image {
-    -fx-background-radius: 15;
-    -fx-border-radius: 15;
-    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.15), 12, 0, 0, 3);
+/* ---- LEFT : BRAND ---- */
+
+.brand-content {
+    -fx-max-width: 560px;
 }
 
-.logo-circle {
-    -fx-min-width: 78;
-    -fx-min-height: 78;
-    -fx-max-width: 78;
-    -fx-max-height: 78;
-    -fx-background-color: transparent;
-    -fx-border-color: #66B447;
-    -fx-border-width: 7;
-    -fx-border-radius: 50%;
-    -fx-background-radius: 50%;
-}
-
-.logo-symbol {
-    -fx-font-size: 42px;
-    -fx-text-fill: #76C34E;
-}
-
-.brand-title {
-    -fx-font-size: 39px;
+.brand-name {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 30px;
     -fx-font-weight: bold;
-    -fx-text-fill: white;
 }
 
-.brand-subtitle {
-    -fx-font-size: 20px;
+.brand-tagline {
+    -fx-text-fill: #C9E2CE;
+    -fx-font-size: 14px;
+}
+
+.brand-heading {
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 34px;
     -fx-font-weight: bold;
-    -fx-text-fill: white;
+    -fx-wrap-text: true;
+    -fx-padding: 16px 0 0 0;
 }
 
-.brand-description {
-    -fx-font-size: 13px;
-    -fx-text-fill: #D1E1D8;
-    -fx-text-alignment: center;
+.brand-sub {
+    -fx-text-fill: #DCEEE0;
+    -fx-font-size: 14.5px;
+    -fx-wrap-text: true;
 }
 
-/* Partie droite */
-.login-panel {
-    -fx-background-color: #F4F6F1;
+.brand-features {
+    -fx-padding: 14px 0 0 0;
+}
+
+.brand-feature-item {
+    -fx-text-fill: rgba(255, 255, 255, 0.92);
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+}
+
+.brand-separator *.line {
+    -fx-border-color: rgba(255, 255, 255, 0.35);
+    -fx-border-width: 1px;
+}
+
+/* ---- RIGHT : LOGIN CARD (glass) ---- */
+
+.card {
+    -fx-background-color: linear-gradient(
+            to bottom,
+            rgba(255, 255, 255, 0.75),
+            rgba(255, 255, 255, 0.55)
+    );
+    -fx-background-radius: 28px;
+    -fx-border-color: rgba(255, 255, 255, 0.80);
+    -fx-border-width: 1.2px;
+    -fx-border-radius: 28px;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(15, 45, 32, 0.35),
+            30, 0, 0, 10
+    );
 }
 
 .welcome-title {
-    -fx-font-size: 37px;
+    -fx-font-size: 23px;
     -fx-font-weight: bold;
-    -fx-text-fill: #174D39;
+    -fx-text-fill: #1E3D2E;
 }
 
 .welcome-description {
-    -fx-font-size: 16px;
-    -fx-text-fill: #557064;
-}
-
-.language-link {
-    -fx-text-fill: #64756D;
     -fx-font-size: 13px;
-    -fx-border-color: transparent;
-    -fx-underline: false;
+    -fx-font-weight: bold;
+    -fx-text-fill: #4E5A52;
 }
 
-.language-button {
-    -fx-background-color: #174D39;
-    -fx-text-fill: white;
-    -fx-background-radius: 25;
-    -fx-padding: 8 18;
-    -fx-cursor: hand;
-}
-
-.form-container {
-    -fx-padding: 10 0 0 0;
-}
+/* Underline-style fields */
 
 .input-field {
-    -fx-background-color: #E8ECE7;
-    -fx-background-radius: 25;
-    -fx-border-color: #DDE3DC;
-    -fx-border-radius: 25;
-    -fx-padding: 10 18;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #B9C6BD transparent;
+    -fx-border-width: 0 0 1.5px 0;
+    -fx-padding: 12px 2px;
     -fx-font-size: 14px;
-    -fx-text-fill: #254A39;
-    -fx-prompt-text-fill: #929B95;
+    -fx-text-fill: #16352A;
+    -fx-prompt-text-fill: #7E8C83;
 }
 
 .input-field:focused {
-    -fx-border-color: #24684C;
-    -fx-border-width: 1.5;
+    -fx-background-color: transparent;
+    -fx-border-color: transparent transparent #2E7D5B transparent;
+    -fx-border-width: 0 0 2px 0;
 }
 
 .remember-checkbox {
-    -fx-font-size: 13px;
-    -fx-text-fill: #385747;
+    -fx-font-size: 12.5px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #45534A;
 }
 
-.login-button {
-    -fx-background-color: #17543D;
-    -fx-text-fill: white;
-    -fx-background-radius: 25;
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
+.forgot-link {
+    -fx-font-size: 12.5px;
+    -fx-text-fill: #2E8B62;
     -fx-cursor: hand;
 }
 
+.forgot-link:hover {
+    -fx-text-fill: #1E5C41;
+    -fx-underline: true;
+}
+
+.login-button {
+    -fx-background-color: linear-gradient(
+            to right,
+            #1B5E43,
+            #2E8B62
+    );
+    -fx-text-fill: #FFFFFF;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 14px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(
+            gaussian,
+            rgba(27, 94, 67, 0.35),
+            12, 0, 0, 4
+    );
+}
+
 .login-button:hover {
-    -fx-background-color: #267653;
+    -fx-background-color: linear-gradient(
+            to right,
+            #236F51,
+            #3A9E72
+    );
 }
 
 .message-label {
-    -fx-text-fill: #B33A32;
+    -fx-text-fill: #D9534F;
     -fx-font-size: 12px;
 }
 
-.separator-line {
-    -fx-background-color: #D8DED7;
-    -fx-pref-height: 1;
-    -fx-max-height: 1;
-}
-
-.separator-text {
-    -fx-text-fill: #849087;
-    -fx-font-size: 14px;
+.footer-text {
+    -fx-text-fill: #5C675F;
+    -fx-font-size: 11px;
 }

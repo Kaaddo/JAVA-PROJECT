@@ -1,16 +1,14 @@
-package ma.agrigest.controller;
 
+package ma.agrigest.controller;
 
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.BorderPane;
+import javafx.geometry.Pos;
 
 import java.io.IOException;
 import java.net.URL;
-import javafx.geometry.Pos;
-
-
 
 public class MainController {
 
@@ -23,24 +21,31 @@ public class MainController {
     }
 
     private void afficherPage(String nomPage) {
+
         try {
-            URL url = getClass().getResource("/view/" + nomPage);
+            URL url = getClass().getResource(
+                    "/view/" + nomPage
+            );
 
             if (url == null) {
-                System.out.println("Page introuvable : " + nomPage);
+                System.out.println(
+                        "Page introuvable : " + nomPage
+                );
                 return;
             }
 
             FXMLLoader loader = new FXMLLoader(url);
             Parent page = loader.load();
+
             BorderPane.setAlignment(page, Pos.TOP_LEFT);
+
             mainPane.setCenter(page);
 
         } catch (IOException e) {
             e.printStackTrace();
         }
     }
-    // min hna  ya d4ti 3la butin kai idik sfha akhra
+
     @FXML
     private void afficherDashboard() {
         afficherPage("dashboard.fxml");
@@ -75,6 +80,7 @@ public class MainController {
     private void afficherRapports() {
         afficherPage("rapports.fxml");
     }
+
     @FXML
     private void afficherParametres() {
         afficherPage("parametres.fxml");

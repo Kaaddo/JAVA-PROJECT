@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+        <?import javafx.scene.control.*?>
+        <?import javafx.scene.image.Image?>
+        <?import javafx.scene.image.ImageView?>
+        <?import javafx.scene.layout.*?>
+        <?import javafx.geometry.Insets?>
+        <?import javafx.scene.shape.Circle?>
+
+<StackPane fx:id="brandPanel"
+           styleClass="login-root"
+           minWidth="960"
+           minHeight="620"
+           xmlns:fx="http://javafx.com/fxml"
+           fx:controller="ma.agrigest.controller.LoginController"
+           stylesheets="@style.css">
+
+    <!-- FULLSCREEN BACKGROUND -->
+    <ImageView fx:id="farmImage"
+               preserveRatio="false"
+               smooth="true">
+        <image>
+            <Image url="@../ma/agrigest/images/login2.png"/>
+        </image>
+    </ImageView>
+
+    <HBox styleClass="login-content" alignment="CENTER" spacing="50">
+
+        <StackPane alignment="CENTER" HBox.hgrow="NEVER">
+
+            <VBox styleClass="card"
+                  alignment="TOP_CENTER"
+                  spacing="16"
+                  minWidth="420"
+                  maxWidth="420"
+                  maxHeight="-Infinity">
+
+                <padding>
+                    <Insets top="32" right="34" bottom="24" left="34"/>
+                </padding>
+
+                <ImageView fitWidth="46" fitHeight="46" smooth="true">
+                    <image>
+                        <Image url="@../ma/agrigest/images/logo.png"/>
+                    </image>
+                    <clip>
+                        <Circle radius="23" centerX="23" centerY="23"/>
+                    </clip>
+                </ImageView>
+
+                <Label text="Bienvenue 👋"
+                       fx:id="welcomeLabel"
+                       styleClass="welcome-title"/>
+
+                <Label text="Connectez-vous à votre espace AgriGest"
+                       fx:id="descriptionLabel"
+                       styleClass="welcome-description"
+                       wrapText="true"/>
+
+                <TextField fx:id="usernameField"
+                           promptText="Nom d'utilisateur"
+                           styleClass="input-field"/>
+
+                <PasswordField fx:id="passwordField"
+                               promptText="Mot de passe"
+                               styleClass="input-field"/>
+
+                <HBox alignment="CENTER_LEFT">
+                    <CheckBox fx:id="rememberCheckBox"
+                              text="Se souvenir de moi"
+                              styleClass="remember-checkbox"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label text="Mot de passe oublié ?" styleClass="forgot-link"/>
+                </HBox>
+
+                <Button fx:id="loginButton"
+                        text="→    Se connecter"
+                        onAction="#handleLogin"
+                        maxWidth="Infinity"
+                        prefHeight="48"
+                        styleClass="login-button"/>
+
+                <Label fx:id="messageLabel"
+                       styleClass="message-label"
+                       wrapText="true"/>
+
+                <Label text="© 2026 AgriGest • Agriculture intelligente"
+                       styleClass="footer-text"/>
+
+            </VBox>
+
+        </StackPane>
+
+    </HBox>
+
+</StackPane>
